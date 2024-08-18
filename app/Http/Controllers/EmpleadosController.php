@@ -35,10 +35,10 @@ class EmpleadosController extends Controller
     public function store(Request $request)
     {
         $campos=[
-            'nombre'=> 'required|string|max:100',
-            'apellidos'=> 'required|string|max:100',
-            'email' => 'required|email',
-            'foto'=>'required|max:1000|mimes:jpg,png,jpeg'
+            'nombre'=> 'string|max:100',
+            'apellidos'=> 'string|max:100',
+            'email' => 'email',
+            'foto'=>'nullable|mimes:jpg,png,jpeg'
         ];
 
         $Mensaje=["required"=>'El :attribute es requerido'];
